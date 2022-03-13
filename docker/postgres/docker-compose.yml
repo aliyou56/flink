@@ -1,0 +1,13 @@
+version: "2.2"
+
+services:
+  prostgres:
+    image: postgres:latest
+    container_name: flink-postgres
+    environment:
+      - "TZ=Europe/Paris"
+      - "POSTGRES_USER=docker"
+      - "POSTGRES_PASSWORD=docker"
+    ports:
+      - "5432:5432"
+
